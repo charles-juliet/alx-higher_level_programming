@@ -1,16 +1,11 @@
 #!/usr/bin/node
-/* script that prints a message depending of the number of arguments passed:
-  If no arguments are passed to the script, print “No argument”
-  If only one argument is passed to the script, print “Argument found”
-  Otherwise, print “Arguments found”
-*/
+const { argv } = require('process');
 
-if (process.argv.length > 3) {
-  console.log('Arguments found');
-}
-if (process.argv.length === 3) {
-  console.log('Argument found');
-}
-if (process.argv.length === 2) {
+const argvLength = argv.length - 2;
+if (argvLength <= 0) {
   console.log('No argument');
+} else if (argvLength === 1) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
 }

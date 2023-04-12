@@ -1,31 +1,41 @@
 #!/usr/bin/python3
 """
-===============================================================
-script that takes in the name of a state as an argument and
-lists all cities of that state, using the database hbtn_0e_4_usa
-===============================================================
+This script  takes in the name of a state
+as an argument and lists all cities of that
+state, using the database `hbtn_0e_4_usa`.
 """
 
 import MySQLdb
-import sys
+from sys import argv
 
+if __name__ == '__main__':
+    """
+    Access to the database and get the cities
+    from the database.
+    """
 
-def states():
-    """states to import"""
+    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], db=argv[3])
 
-    connect_db = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                                 passwd=sys.argv[2], db=sys.argv[3], port=3305)
+    with db.cursor() as cur:
+        cur.execute("""
+            SELECT
+                cities.id, cities.name
+            FROM
+                cities
+            JOIN
+                states
+            ON
+                cities.state_id = states.id
+            WHERE
+                states.name LIKE BINARY %(state_name)s
+            ORDER BY
+                cities.id ASC
+        """, {
+            'state_name': argv[4]
+        })
 
-    cur = connect_db.cursor()
-    query1 = "SELECT cities.name FROM cities INNER JOIN states ON\
-    states.id = cities.state_id WHERE states.name = %s"
-    cur.execute(query1, (sys.argv[4], ))
-    val = cur.fetchall()
-    _list = []
-    for row in val:
-        _list.append(row[0])
-    print(', '.join(_list))
-    cur.close()
-    connect_db.close()
-if __name__ == "__main__":
-    states()
+        rows = cur.fetchall()
+
+    if rows is not None:
+        print(", ".join([row[1] for row in rows]))

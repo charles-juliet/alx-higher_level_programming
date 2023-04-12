@@ -1,17 +1,11 @@
 #!/usr/bin/node
-/* script that searches the second biggest integer in the list of arguments.
-   You can assume all arguments can be converted to integer
-   If no argument passed, print 0
-   If the number of arguments is 1, print 0
-   You must use console.log(...) to print all output
-   You are not allowed to use var
-*/
+const { argv } = require('process');
 
-if (process.argv[3]) {
-  const array = process.argv.slice(2);
-  array.sort();
-  const num = array.length;
-  console.log(array[num - 2]);
-} else {
+if (argv.length <= 3) {
   console.log(0);
+} else {
+  let newArgv = argv.slice(2, argv.length);
+  newArgv = newArgv.map((value) => parseInt(value));
+  newArgv.sort((a, b) => b - a);
+  console.log(newArgv[1]);
 }

@@ -1,7 +1,4 @@
 #!/usr/bin/node
-/* script that replace 12 with 89
-*/
-
 const myObject = {
   type: 'object',
   value: 12

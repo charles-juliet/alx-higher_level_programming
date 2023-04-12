@@ -1,52 +1,63 @@
-<p>
-<img width="260" height="170" src="https://davidjohncoleman.com/wp-djc/wp-content/uploads/2017/06/HBTN-Borderless-CMYK-Logo-Vertical-Color-Black@1200ppi-300x236.png" align="right" >
-</p>
+# 0x11. Python - Network #1 
 
+## Resource
 
+- [Quickstart with Requests package](https://docs.python.org/3/howto/urllib2.html)
+- [Requests package](https://docs.python-requests.org/en/master/)
 
+## Tasks
 
+<details>
+<summary><a href="./0-hbtn_status.py">0. What's my status? #0</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/6QWKW73K/image.png' border='0' alt='image'/></a>
+</details>
 
-# :colombia: Python - Network #1                                           
-- How to fetch internet resources with the Python package urllib
-- How to decode urllib body response
-- How to use the Python package requests #requestsiswaysimplerthanurllib
-- How to make HTTP GET request
-- How to make HTTP POST/PUT/etc. request
-- How to fetch JSON resources
-- How to manipulate data from an external service
-## Examples                                                                
-## Prerequisites                                                           
-- Quickstart with Requests package
-- Requests package
-## Installing
+<details>
+<summary><a href="./1-hbtn_header.py">1. Response header value #0</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/R0vmSgdq/image.png' border='0' alt='image'/></a>
+</details>
 
-## Built With
+<details>
+<summary><a href="./2-post_email.py">2. POST an email #0</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/MHhrrGHg/image.png' border='0' alt='image'/></a>
+</details>
 
-All the code was write under ubuntu 14.04                                       
+<details>
+<summary><a href="./3-error_code.py">3. Error code #0</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/cLrd4Lhx/image.png' border='0' alt='image'/></a>
+</details>
 
-## Contributing
+<details>
+<summary><a href="./4-hbtn_status.py">4. What's my status? #1</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/sg4fNNTS/image.png' border='0' alt='image'/></a>
+</details>
 
--- Yesid Gutierrez - Holberton Student                                          
+<details>
+<summary><a href="./5-hbtn_header.py">5. Reponse header value #1</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/Bn5FqNnc/image.png' border='0' alt='image'/></a>
+</details>
 
-## Versioning
-for my learning in Holberton School
+<details>
+<summary><a href="./6-post_email.py">6. POST an email #1</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/x1G6WvrB/image.png' border='0' alt='image'/></a>
+</details>
 
-## Authors
+<details>
+<summary><a href="./7-error_code.py">7. Error code #1</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/fT0s0TpB/image.png' border='0' alt='image'/></a>
+</details>
 
----Yesid Gutierrez  944@holbertonshcool.com                                    
-                                                                               
-## Files
+<details>
+<summary><a href="./8-json_api.py">8. Search API</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/650QQQvg/image.png' border='0' alt='image'/></a>
+</details>
 
-|             File               |             Description                  |
-|--------------------------------| ---------------------------------------- |
-|**0-hbtn_status.py**|Python script that fetches https://intranet.hbtn.io/status|
-|**1-hbtn_header.py**|Python script that takes in a URL, sends a request to the URL and displays the value of the X-Request-Id variable found in the header of the response.|
-|**2-post_email.py**|Python script that takes in a URL and an email, sends a POST request to the passed URL with the email as a parameter, and displays the body of the response (decoded in utf-8)|
-|**3-error_code.py**|Python script that takes in a URL, sends a request to the URL and displays the body of the response (decoded in utf-8)|
-|**4-hbtn_status.py**|Python script that fetches https://intranet.hbtn.io/status, You must use the package requests, You are not allow to import packages other than requests, The body of the response must be display like the following example (tabulation before -)|
-|**5-hbtn_header.py*|Python script that takes in a URL, sends a request to the URL and displays the value of the variable X-Request-Id in the response header You must use the packages requests and sys, You are not allow to import other packages than requests and sys, The value of this variable is different for each request, You don’t need to check script arguments (number and type)|
-|**6-post_email.py**|Python script that takes in a URL and an email address, sends a POST request to the passed URL with the email as a parameter, and finally displays the body of the response. The email must be sent in the variable email, You must use the packages requests and sys, You are not allowed to import packages other than requests and sys, You don’t need to error check arguments passed to the script (number or type)|
-|**7-error_code.py**|Python script that takes in a URL, sends a request to the URL and displays the body of the response. If the HTTP status code is greater than or equal to 400, print: Error code: followed by the value of the HTTP status code, You must use the packages requests and sys, You are not allowed to import packages other than requests and sys, You don’t need to check arguments passed to the script (number or type)|
-|**8-json_api.py**|Python script that takes in a letter and sends a POST request to http://0.0.0.0:5000/search_user with the letter as a parameter. The letter must be sent in the variable q, If no argument is given, set q="" If the response body is properly JSON formatted and not empty, display the id and name like this: [<id>] <name> Otherwise: Display Not a valid JSON is the JSON is invalid Display No result is the JSON is empty You must use the package requests and sys You are not allowed to import packages other than requests and sys|
-|**9-starwars.py**|Python script that takes in a string and sends a search request to the Star Wars API. Use the Star Wars API search people endpoint, Use the string argument as the search value of the request, The body response must be JSON and converted to a Python dictionary. Display: Number of results: <count>, Display the name of each result (see example below), You must use the packages requests and sys, You are not allowed to import packages other than requests and sys, You don’t need to check arguments passed to the script (number or type), You don’t need to manage the pagination|
-|**10-my_github.py**|Python script that takes your Github credentials (username and password) and uses the Github API to display your id, You must use Basic Authentication to access to your information, The first argument will be your username, The second argument will be your password, You must use the package requests and sys, You are not allowed to import packages other than requests and sys, You don’t need to check arguments passed to the script (number or type)|
+<details>
+<summary><a href="./10-my_github.py">9. My Github!</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/s2MvVrRD/image.png' border='0' alt='image'/></a>
+</details>
+
+<details>
+<summary><a href="./100-github_commits.py">10. Time for an interview!</a></summary><br>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/SxDDBWyb/image.png' border='0' alt='image'/></a>
+</details>

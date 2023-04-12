@@ -1,25 +1,15 @@
 #!/usr/bin/node
 
-const square = require('./5-square');
+const Square1 = require('./5-square.js');
 
-// inherint from Square
-class Square extends square {
-  constructor (size) {
-    super(size, size);
-  }
-
-  // method that prints the rectangle using the character c
+class Square extends Square1 {
   charPrint (c) {
     if (c === undefined) {
-      c = 'X';
-    }
-    let ToPrint;
-    for (let i = 0; i < this.height; i++) {
-      ToPrint = '';
-      for (let j = 0; j < this.width; j++) {
-        ToPrint += c;
+      this.print();
+    } else {
+      for (let i = 0; i < this.height; i++) {
+        console.log(c.repeat(this.width));
       }
-      console.log(ToPrint);
     }
   }
 }
