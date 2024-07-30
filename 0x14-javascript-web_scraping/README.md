@@ -1,8 +1,8 @@
-<!--JavaScript - Web scraping-->
+# JavaScript - Web scraping
 
 :+1: This project contains some tasks for learning how to perform web scraping with JavaScript. :shipit:
 
-<!--Tasks To Complete-->
+## Tasks To Complete
 
 - [x] 0. Readme
 [0-readme.js](https://github.com/charles-juliet/alx-higher_level_programming/blob/master/0x14-javascript-web_scraping/0-readme.js) contains a script that reads and prints the content of a file.
@@ -31,7 +31,7 @@
 
   - Requirements:
     - The first argument is the movie ID.
-    - You must use the Star wars API with the endpoint https://swapi-api.hbtn.io/api/films/:id.
+    - You must use the [Star wars API](https://swapi-api.hbtn.io/) with the endpoint https://swapi-api.hbtn.io/api/films/:id.
     - You must use the module request.
 - [x] 4. Star wars Wedge Antilles
 [4-starwars_count.js](https://github.com/charles-juliet/alx-higher_level_programming/blob/master/0x14-javascript-web_scraping/4-starwars_count.js) contains a script that prints the number of movies where the character "Wedge Antilles" is present.
@@ -62,7 +62,7 @@
   - Requirements:
     - The first argument is the Movie ID - example: 3 = "Return of the Jedi".
     - Display one character name by line.
-    - You must use the Star wars API.
+    - You must use the [Star wars API](https://swapi-api.hbtn.io/).
     - You must use the module request.
 - [x] 8. Right order
 [101-starwars_characters.js](https://github.com/charles-juliet/alx-higher_level_programming/blob/master/0x14-javascript-web_scraping/101-starwars_characters.js) contains a script that prints all characters of a Star Wars movie.
@@ -70,5 +70,5 @@
   - Requirements:
     - The first argument is the Movie ID - example: 3 = "Return of the Jedi".
     - Display one character name by line in the same order of the list "characters" in the /films/ response.
-    - You must use the Star wars API.
+    - You must use the [Star wars API](https://swapi-api.hbtn.io/).
     - You must use the module request.
